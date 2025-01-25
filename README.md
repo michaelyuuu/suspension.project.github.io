@@ -1,6 +1,6 @@
 # Nerfies
 
-This is the repository that contains source code for the [Suspension](https://suspension.project.github.io).
+This is the repository that contains source code for the [Suspension](https://michaelyuuu.github.io/suspension.project.github.io/)).
 
 If you find Nerfies useful for your work please cite:
 ```
