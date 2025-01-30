@@ -57,12 +57,6 @@
           <i class="fas fa-home"></i>
       </span>
       </a>
-      <div class="navbar-menu" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-        <a class="navbar-item button is-primary" href="#home">Home</a>
-        <a class="navbar-item button is-link" href="#projects">Projects</a>
-        <a class="navbar-item button is-info" href="#about">About</a>
-        <a class="navbar-item button is-danger" href="#contact">Contact</a>
-       </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
@@ -218,11 +212,11 @@
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="item item-SU1">
+          <img poster="" id="SU1" >
+            <source src="./static/images/SU1.jpg"
+                    type="image/jpg">
+        </img>
         </div>
         <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
@@ -344,9 +338,42 @@
     <!--/ Matting. -->
 
     <!-- Animation. -->
- 
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Animation</h2>
+
         <!-- Interpolating. -->
-        
+        <h3 class="title is-4">Interpolating states</h3>
+        <div class="content has-text-justified">
+          <p>
+            We can also animate the scene by interpolating the deformation latent codes of two input
+            frames. Use the slider here to linearly interpolate between the left frame and the right
+            frame.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div>
+        </div>
+        <br/>
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
